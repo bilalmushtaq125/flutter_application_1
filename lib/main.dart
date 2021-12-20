@@ -26,7 +26,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: const Center(
-        child: Text('Video'),
+        child: Text('Home'),
       ),
       drawer: Drawer(
         child: ListView(
