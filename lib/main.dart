@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: appTitle,
       home: MyHomePage(title: appTitle),
     );
@@ -26,7 +27,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: const Center(
-        child: Text('Home'),
+        child: Text('BNU'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -36,7 +37,7 @@ class MyHomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.yellow,
               ),
-              child: Text('Home'),
+              child: Text('Menu'),
             ),
             ListTile(
               title: const Text('Home'),
@@ -50,6 +51,12 @@ class MyHomePage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
+            ListTile(
+              title: const Text('Find Us on Google Map'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            )
           ],
         ),
       ),
